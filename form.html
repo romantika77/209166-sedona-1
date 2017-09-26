@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона: форма обратной связи</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <nav class="main-nav">
+        <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Htmlacademy</a>
+          </li>
+        </ul>
+        <button class="main-nav__toggle toggle" type="button"><span class="visually-hidden">Показать меню</span></button>
+        <a class="main-nav__logo" href="index.html">
+          <img class="main-nav__logo-image" src="http://placehold.it/150x100" alt="sedona-logo">
+        </a>
+      </nav>
+      <div class="page-header__picture">
+        <img src="http://placehold.it/150x100" alt="Sedona">
+      </div>
+    </header>
+    
+    <main class="page-main">
+      <form class="review-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="review-form__username">
+          <legend class="review-form__title">Представьтесь:</legend>
+          <label class="review-form__ name" for="name-field">Имя<sup>*</sup>:</label>
+          <input class="review-form__field" type="text" name="name" id="name-field" placeholder="Петр" required>
+          <label class="review-form__ name" for="fullname-field">Фамилия<sup>*</sup>:</label>
+          <input class="review-form__field" type="text" name="fullname" id="fullname-field" placeholder="Иванов" required>
+          <label class="review-form__ name" for="patronymic-field">Отчество:</label>
+          <input class="review-form__field" type="text" name="patronymic" id="patronymic-field" placeholder="Александрович">
+        </fieldset>
+        <fieldset class="review-form__contacts">
+          <legend class="review-form__title">Контактная информация:</legend>
+          <label class="review-form__name" for="phone-field">Контактный телефон<sup>*</sup>:</label>
+          <input class="review-form__field" type="tel" name="phone" id="phone-field" placeholder="Введите телефон" required>
+          <label class="review-form__name" for="email-field">Электронная почта<sup>*</sup>:</label>
+          <input class="review-form__field" type="email" name="email" id="email-field" placeholder="Введите e-mail" required>
+        </fieldset>
+        <fieldset class="review-form__impress">
+          <legend class="review-form__title">Ваше общее впечатление:</legend>
+          <input class="review-form__field" type="radio" name="impress" id="radio-1" value="positive" checked>
+          <label class="review-form__name review-form__name--strong" for="radio-1">Скорее положительное</label>
+          <input class="review-form__field" type="radio" name="impress" id="radio-2" value="negative">
+          <label class="review-form__name review-form__name--strong" for="radio-2">Скорее отрицательное</label>
+          <input class="review-form__field" type="radio" name="impress" id="radio-3" value="whatever">
+          <label class="review-form__name review-form__name--strong" for="radio-3">Затрудняюсь ответить</label>
+        </fieldset>
+        <fieldset class="review-form__attractions">
+          <legend class="review-form__title">Посещенные достопримечательности:</legend>
+          <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-1" value="bridge" checked>
+          <label class="review-form__name review-form__name--strong" for="checkbox-1">Мост Дьявола</label>
+          <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-2" value="park" checked>
+          <label class="review-form__name review-form__name--strong" for="checkbox-2">Слайд-парк</label>
+          <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-3" value="mountain">
+          <label class="review-form__name review-form__name--strong" for="checkbox-3">Гора-колокол</label>
+          <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-4" value="cliffs" checked>
+          <label class="review-form__name review-form__name--strong" for="checkbox-4">Красные скалы</label>
+        </fieldset>
+        <fieldset class="review-form__comment">
+          <legend class="review-form__title">Опишите свои эмоции:</legend>
+          <textarea class="review-form__comment-field" name="comment" id="comment-field" placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <button class="review-form__submit button">Отправить отзыв</button>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__tags tags">#visitsedona</div>
+      <div class="page-footer__social social">
+        <a href="#" class="social__social-btn social__social-btn--tw"><span class="visually-hidden">Твиттер</span></a>
+        <a href="#" class="social__social-btn social__social-btn--fb"><span class="visually-hidden">Фейсбук</span></a>
+        <a href="#" class="social__social-btn social__social-btn--youtube"><span class="visually-hidden">Ютубе</span></a>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <span class="copyright__copy">Разработано</span>
+        <a href="https://htmlacademy.ru" class="copyright__link"><span class="visually-hidden">Htmlacademy.ru</span></a>
+      </div>
+    </footer>
+    
+  </body>
+</html>
