@@ -1,0 +1,57 @@
+.features {
+  // background-color: silver;
+}
+
+.features__item--blue {
+  background-color: @blue-color;
+}
+
+.features__container:not(.features__container--container3) {
+  background-repeat: no-repeat;
+}
+
+.features__container--container1 {
+  padding-bottom: 250px;
+  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-position: bottom;
+}
+
+.features__container--container2 {
+  padding-bottom: 250px;
+  background-image: url("../img/main-bridge-mobile@1x.jpg");
+  background-position: bottom;
+}
+
+
+@media (min-width: @tablet-width) {
+  .features__container {
+    display: flex;
+    padding-bottom: 0;
+    background-color: tan;
+  }
+  .features__item {
+    width: 256px;
+    padding-left: 46px;
+    padding-right: 46px;
+    padding-top: 45px;
+    text-align: center;
+  }
+  .features__container--container1 {
+    background-position: top right;
+  }
+  .features__container--container2 {
+    justify-content: flex-end;
+    background-position: top left;
+  }
+  .features__header {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .features__item {
+    width: 400px;
+  }
+}

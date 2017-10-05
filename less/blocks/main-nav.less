@@ -1,0 +1,24 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__logo {
+  display: block;
+  width: 102px;
+  height: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__close {
+    display: none;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -51px;
+  }
+}

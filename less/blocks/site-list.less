@@ -1,0 +1,34 @@
+.site-list {
+  .list-reset();
+}
+
+.site-list__link {
+  color: #ffffff;
+  .link-reset ();
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+  }
+  .site-list__item {
+    width: 153px;
+    color: @black-color;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  .site-list__item--item3 {
+    margin-left: auto;
+  }
+  .site-list__link {
+    color: @black-color;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .site-list__item {
+    width: 239px;
+  }
+}
+
+
