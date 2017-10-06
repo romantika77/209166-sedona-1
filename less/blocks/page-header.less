@@ -1,0 +1,39 @@
+.page-header {
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "PTSansBold", "Arial", sans-serif;
+  background-color: @blue-color;
+  outline: 5px solid plum;
+}
+
+.page-header__picture {
+  overflow: hidden;
+}
+
+.page-header__image {
+  width: 768px;
+  margin-left: -230px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    font-size: 14px;
+    line-height: 26px;
+    color: @black-color;
+    background-color: #ffffff;
+  }
+  .page-header__picture {
+    overflow: auto;
+  }
+  .page-header__image {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .page-header__image {
+    width: 100%;
+  }
+}

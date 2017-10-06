@@ -1,0 +1,122 @@
+.review-form {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.review-form__group {
+  // display: block;
+  padding: 0;
+  // padding-top: 20px;
+  padding-bottom: 25px;
+  margin: 0;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+.review-form__title {
+  // display: block;
+  margin: 0 auto;
+  color: @black-color;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "PTSansBold", "Arial", sans-serif;
+  // background-color: pink;
+}
+
+.review-form__name {
+  line-height: 26px;
+}
+
+.review-form__field {
+  width: auto;
+  margin-bottom: 20px;
+  padding: 18px;
+  font-size: 18px;
+  font-family: "PTSansBold", "Arial", sans-serif;
+  line-height: 26px;
+  color: @black-color;
+}
+
+.review-form__comment-field {
+  width: 100%;
+  min-height: 160px;
+}
+
+@media (min-width: @tablet-width) {
+  .review-form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review-form {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .review-form__group {
+    width: 324px;
+  }
+  .review-form__contacts {
+    width: 648px;
+    order: 3;
+  }
+  .review-form__field--phone,
+  .review-form__field--email {
+    width: 100%;
+  }
+  .review-form__impress {
+    order: 1;
+  }
+  .review-form__username {
+    order: 2;
+  }
+  .review-form__attractions {
+    width: 648px;
+    order: 4;
+    // background-color: tan;
+  }
+  .review-form__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review-form__rubric {
+    width: 324px;
+    // background-color: pink;
+  }
+  .review-form__rubric:nth-of-type(3) {
+    order: 1;
+  }
+  .review-form__rubric:nth-of-type(2) {
+    order: 2;
+  }
+  .review-form__rubric:nth-of-type(4) {
+    order: 3;
+  }
+  .review-form__comment {
+    width: 648px;
+  }
+  .review-form__note {
+    margin-left: 160px;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .review-form {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .review-form__group {
+    width: 480px;
+  }
+  .review-form__contacts,
+  .review-form__attractions,
+  .review-form__comment {
+    width: 960px;
+  }
+  .review-form__rubric {
+    width: 240px;
+  }
+  .review-form__note {
+    margin-left: 317px;
+  }
+}

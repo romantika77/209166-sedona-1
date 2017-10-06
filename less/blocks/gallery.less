@@ -1,0 +1,42 @@
+.gallery__item {
+  .list-reset();
+}
+
+.gallery__caption {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.gallery__author {
+  font-weight: 400;
+  text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .gallery__item {
+    width: 324px;
+  }
+  .gallery__item--item1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .gallery {
+    padding: 0;
+  }
+  .gallery__item {
+    width: 400px;
+  }
+  .gallery__item--item1 {
+    width: 100%;
+  }
+}
