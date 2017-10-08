@@ -1,14 +1,47 @@
 .main-nav {
   position: relative;
+  margin-bottom: 56px;
 }
 
 .main-nav__logo {
+  position: absolute;
+  z-index: 10;
+  bottom: -83px;
+  left: 110px;
   display: block;
   width: 102px;
   height: 83px;
 }
 
+.main-nav__close {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  bottom: -37px;
+  right: 20px;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  border: none;
+
+}
+
 @media (min-width: @tablet-width) {
+  .main-nav {
+    margin-bottom: 0;
+  }
   .main-nav__close {
     display: none;
   }
