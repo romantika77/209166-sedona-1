@@ -21,6 +21,11 @@
     background-color: #669ec0;
   }
 }
+.site-list__item--item4 {
+  .site-list__link {
+  box-shadow: inset 0 -7px 5px -5px rgba(0, 0, 0, 0.2);
+  }
+}
 
 @media (min-width: @tablet-width) {
   .site-list {
@@ -42,6 +47,27 @@
     line-height: 26px;
     color: @black-color;
     box-shadow: none;
+    &:hover {
+      color: @blue-color;
+      background-color: #ffffff;
+    }
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+  .site-list__item--item4 {
+    .site-list__link {
+      box-shadow: none;
+    }
+  }
+  .site-list__link--active {
+    color: #766357;
+    &:hover {
+      color: #604e43;
+    }
+    &:active {
+      color: rgba(118, 99, 87, 0.3);
+    }
   }
 }
 
@@ -50,5 +76,3 @@
     width: 239px;
   }
 }
-
-
