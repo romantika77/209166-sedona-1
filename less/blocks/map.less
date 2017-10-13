@@ -1,7 +1,13 @@
 .map {
   height: 350px;
-  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   // background-color: red;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    background-size: auto, cover;
+  }
 }

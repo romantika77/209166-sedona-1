@@ -16,9 +16,8 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-family: "PTSans", "Arial", sans-serif;
-  // font-weight: 400;
   text-transform: uppercase;
-  // color: @base-color;
+  color: @base-color;
   background-color: #ffffff;
 }
 
@@ -51,9 +50,14 @@ img {
 }
 
 @media (min-width: @dekstop-width) {
+  body {
+    background-color: #f2f2f2;
+  }
   .wrapper {
     width: 1200px;
     margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }
 

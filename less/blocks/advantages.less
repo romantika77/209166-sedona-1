@@ -1,6 +1,73 @@
+.advantages {
+  margin: 0;
+  padding: 7px 20px;
+  padding-top: 38px;
+  // background-color: tan;
+}
+
+.advantages__item {
+  position: relative;
+  width: 270px;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  padding-left: 50px;
+  // background-color: pink;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 40px;
+  height: 38px;
+  background-size: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--item1::before {
+  width: 37px;
+  height: 39px;
+  background-image: url("../img/icon-house.svg");
+}
+
+.advantages__item--item2::before {
+  left: 3px;
+  width: 32px;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+}
+
+.advantages__item--item3::before {
+  top: -5px;
+  width: 40px;
+  height: 36px;
+  background-image: url("../img/icon-burger.svg");
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "PTSansBold", "Arial", sans-serif;
+  color: @black-color;
+}
+
+.advantages__desc {
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: @tablet-width) {
   .advantages {
     display: flex;
+    padding: 0;
+    margin-bottom: 35px;
+    // background-color: tan;
   }
   .advantages__item {
     width: 256px;
@@ -8,18 +75,59 @@
     padding-left: 48px;
     padding-right: 48px;
     text-align: center;
+    // background-color: plum;
+  }
+  .advantages__title {
+    margin-bottom: 20px;
+    font-size: 21px;
   }
   .advantages__item--item3 {
     order: 2;
   }
   .advantages__item--item2 {
+    padding-left: 40px;
+    padding-right: 40px;
     order: 3;
+  }
+  .advantages__item::before {
+    top: 60px;
+    left: 90px;
+  }
+  .advantages__item--item1::before {
+    width: 75px;
+    height: 72px;
+  }
+  .advantages__item--item2::before {
+    width: 64px;
+    height: 75px;
+  }
+  .advantages__item--item3::before {
+    width: 77px;
+    height: 68px;
+  }
+  .advantages__desc {
+    // background-color: silver;
   }
 }
 
 @media (min-width: @dekstop-width) {
   .advantages__item {
     width: 400px;
+    margin-bottom: 48px;
   }
-
+  .advantages__item::before {
+    top: 60px;
+    left: 160px;
+  }
+  .advantages__item--item2::before {
+    left: 165px;
+    width: 64px;
+    height: 75px;
+    // background-color: red;
+  }
+  .advantages__item--item3::before {
+    top: 63px;
+    width: 77px;
+    height: 68px;
+  }
 }

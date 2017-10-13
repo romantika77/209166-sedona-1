@@ -4,11 +4,22 @@
   padding-bottom: 17px;
   font-size: 21px;
   line-height: 26px;
-  font-weight: 700;
+  font-family: "PTSansBold", "Arial", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   text-align: center;
   background-color: @blue-color;
   border: none;
   .link-reset();
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5496bd;
+  }
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
+

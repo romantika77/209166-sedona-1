@@ -1,64 +1,317 @@
 .review-form {
-  padding-left: 20px;
+  margin-bottom: 38px;
+  padding-left: 18px;
   padding-right: 20px;
 }
 
 .review-form__group {
-  // display: block;
   padding: 0;
-  // padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 4px;
   margin: 0;
   margin-bottom: 20px;
+  margin-top: 18px;
   border: none;
   border-bottom: 1px solid #e5e5e5;
-
 }
 
 .review-form__title {
-  // display: block;
-  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 21px;
+  padding: 0;
   color: @black-color;
   font-size: 18px;
   line-height: 26px;
   font-family: "PTSansBold", "Arial", sans-serif;
-  // background-color: pink;
+  text-align: center;
 }
 
+.review-form__rubric,
+.review-form__group,
+.review-form__note {
+  sup {
+    position: relative;
+    top: 4px;
+  }
+}
 .review-form__name {
   line-height: 26px;
 }
 
 .review-form__field {
-  width: auto;
   margin-bottom: 20px;
-  padding: 18px;
+  padding: 16px 22px;
   font-size: 18px;
   font-family: "PTSansBold", "Arial", sans-serif;
   line-height: 26px;
   color: @black-color;
+  background-color: #f2f2f2;
+  border: none;
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:focus {
+    padding: 12px 18px;
+    color: @black-color;
+    background-color: #ffffff;
+    border: 4px solid #e5e5e5;
+  }
 }
 
-.review-form__comment-field {
+.review-form__username {
+  .review-form__rubric {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  .review-form__name {
+    padding: 13px 0;
+  }
+  .review-form__name--first-name {
+    width: 50px;
+  }
+  .review-form__field--first-name {
+    width: 230px;
+  }
+  .review-form__name--surname {
+    width: 90px;
+  }
+  .review-form__field--surname {
+    width: 192px;
+  }
+  .review-form__name--surname {
+    width: 88px;
+  }
+  .review-form__field--patronymic {
+    width: 194px;
+  }
+}
+
+.review-form__contacts {
+  position: relative;
+  .review-form__title {
+    margin-bottom: 16px;
+  }
+  .review-form__field {
+    position: relative;
+    width: 100%;
+    padding-right: 58px;
+    margin-bottom: 8px;
+  }
+  .review-form__name {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    padding-bottom: 7px;
+  }
+  .review-form__field:last-child {
+    margin-bottom: 24px;
+  }
+  .review-form__name::after {
+    position: absolute;
+    content: "";
+    bottom: -58px;
+    right: 0;
+    z-index: 10;
+    width: 58px;
+    height: 58px;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .review-form__name--phone::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+  .review-form__name--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
+}
+
+.review-form__impress,
+.review-form__attractions {
+  .review-form__field {
+    display: none;
+  }
+}
+
+.review-form__name--strong {
+  display: block;
+  position: relative;
+  margin-bottom: 42px;
+  padding-left: 29px + 50px;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "PTSansBold", "Arial", sans-serif;
+  color: @black-color;
+  text-transform: none;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 3px;
+    top: -13px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.review-form__impress {
+  position: relative;
+  .review-form__name {
+    &::before {
+      border-radius: 50%;
+      background-color: #f2f2f2;
+    }
+  }
+  .review-form__field:checked + .review-form__name {
+    &::before {
+      background-color: #333333;
+      border: 18px solid #f2f2f2;
+    }
+  }
+  .review-form__field + .review-form__name:hover {
+    &::before {
+      background-color: #e5e5e5;
+      border: 18px solid #e5e5e5;
+    }
+  }
+  .review-form__field:checked + .review-form__name:hover {
+    &::before {
+      background-color: #333333;
+      border: 18px solid #e5e5e5;
+    }
+  }
+  .review-form__field:checked + .review-form__name:hover {
+    &::before {
+      background-color: #333333;
+      border: 18px solid #e5e5e5;
+    }
+  }
+  .review-form__field + .review-form__name:active {
+    &::before {
+      background-color: #d5d5d5;
+      border: 18px solid #d5d5d5;
+    }
+  }
+  .review-form__field:checked + .review-form__name:active {
+    &::before {
+      background-color: rgba(51, 51, 51, 0.3);
+      border: 18px solid #d5d5d5;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 292px;
+    background-color: #dbdbdb;
+  }
+}
+
+.review-form__attractions {
+  .review-form__title {
+    margin-bottom: 13px;
+  }
+  .review-form__rubric {
+    margin-bottom: 54px;
+  }
+  .review-form__name {
+    margin-bottom: 0;
+    &::before {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 5px;
+      width: 25px;
+      height: 19px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .review-form__field + .review-form__name:hover {
+    &::before {
+      background-color: #e5e5e5;
+    }
+  }
+  .review-form__field + .review-form__name:active {
+    &::before {
+      background-color: #d5d5d5;
+    }
+  }
+  .review-form__field:checked + .review-form__name {
+    &::after {
+      background-image: url("../img/icon-tick.svg");
+    }
+  }
+  .review-form__field:checked + .review-form__name:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+  .review-form__rubric:last-child {
+    margin-bottom: 38px;
+  }
+}
+
+.review-form__comment {
+  border: none;
+  .review-form__title {
+    margin-bottom: 15px;
+  }
+}
+
+.review-form__field--comment {
   width: 100%;
   min-height: 160px;
+  border: none;
+}
+
+.review-form__note {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .review-form__wrapper {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   .review-form {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .review-form__group {
-    width: 324px;
+    margin-bottom: 10px;
+    padding-left: 60px;
+    width: 384px;
+  }
+  .review-form__title {
+    text-align: left;
+    font-size: 21px;
+    line-height: 26px;
   }
   .review-form__contacts {
-    width: 648px;
+    width: 768px;
+    padding-right: 60px;
+    margin-bottom: 5px;
     order: 3;
+    border-bottom: none;
+    .review-form__title {
+      width: 100%;
+      margin-bottom: 22px;
+      text-align: center;
+    }
+    .review-form__field {
+      margin-bottom: 19px;
+    }
+    .review-form__rubric {
+      width: 100%;
+    }
   }
   .review-form__field--phone,
   .review-form__field--email {
@@ -66,37 +319,90 @@
   }
   .review-form__impress {
     order: 1;
+    border-bottom: none;
+    .review-form__title {
+      margin-bottom: 59px;
+    }
+    .review-form__name {
+      margin-bottom: 53px;
+    }
   }
+
   .review-form__username {
     order: 2;
+    border-bottom: none;
+    .review-form__title {
+      margin-bottom: 59px;
+    }
+    .review-form__field--first-name {
+      width: 216px;
+    }
+    .review-form__field--surname {
+      width: 178px;
+    }
+    .review-form__field--patronymic {
+      width: 180px;
+    }
+    .review-form__rubric {
+      padding-right: 58px;
+    }
   }
   .review-form__attractions {
-    width: 648px;
+    width: 768px;
+    margin-bottom: 3px;
+    padding-right: 60px;
+    padding-left: 60px;
     order: 4;
-    // background-color: tan;
   }
   .review-form__container {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 90px;
+    padding-right: 33px;
   }
-  .review-form__rubric {
-    width: 324px;
-    // background-color: pink;
-  }
-  .review-form__rubric:nth-of-type(3) {
-    order: 1;
-  }
-  .review-form__rubric:nth-of-type(2) {
-    order: 2;
-  }
-  .review-form__rubric:nth-of-type(4) {
-    order: 3;
+  .review-form__attractions {
+     .review-form__title {
+      width: 280px;
+      margin-bottom: 40px;
+      text-align: center;
+     }
+    .review-form__rubric {
+      width: 262px;
+      padding: 0;
+    }
+    .review-form__rubric:nth-of-type(3) {
+      order: 1;
+    }
+    .review-form__rubric:nth-of-type(2) {
+      order: 2;
+    }
+    .review-form__rubric:nth-of-type(4) {
+      order: 3;
+    }
   }
   .review-form__comment {
-    width: 648px;
+    width: 768px;
+    margin-bottom: 30px;
+    padding-right: 60px;
+    padding-left: 60px;
+    .review-form__title {
+      width: 100%;
+      margin-bottom: 55px;
+      text-align: center;
+    }
   }
   .review-form__note {
-    margin-left: 160px;
+    display: block;
+    width: 165px;
+    align-self: center;
+  }
+  .review-form__submit {
+    width: 324px;
+  }
+  .review-form__wrapper--submit {
+    margin-bottom: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -104,19 +410,137 @@
   .review-form {
     padding-left: 120px;
     padding-right: 120px;
-  }
-  .review-form__group {
-    width: 480px;
+    margin-bottom: 67px;
   }
   .review-form__contacts,
   .review-form__attractions,
   .review-form__comment {
     width: 960px;
+    .review-form__title {
+      position: relative;
+      // background-color: pink;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 278px;
+        height: 1px;
+        background-color: #dbdbdb;
+      }
+      &::before {
+        right: 70%;
+      }
+      &:after {
+        left: 70%;
+      }
+    }
   }
-  .review-form__rubric {
-    width: 240px;
+  .review-form__attractions {
+    border-bottom: none;
+    .review-form__title {
+      &::before {
+        right: 120%;
+      }
+      &::after {
+        left: 120%;
+      }
+    }
+  }
+  .review-form__username,
+  .review-form__impress {
+    padding: 0;
+    .review-form__rubric {
+      width: 480px;
+    }
+    .review-form__title {
+      margin-left: 77px;
+      text-align: left;
+    }
+  }
+  .review-form__username {
+    .review-form__rubric {
+      padding: 0;
+      padding-left: 79px;
+    }
+    .review-form__field--first-name {
+      width: 350px;
+    }
+    .review-form__field--surname {
+      width: 312px;
+    }
+    .review-form__field--patronymic {
+      width: 314px;
+    }
+  }
+
+  .review-form__contacts {
+    width: 960px;
+    padding: 0;
+    margin-bottom: 12px;
+    .review-form__title {
+      margin-bottom: 72px;
+    }
+    .review-form__rubric {
+      display: flex;
+      width: 480px;
+      padding: 0;
+    }
+    .review-form__field--phone {
+      width: 315px;
+    }
+    .review-form__name--phone {
+      width: 480px - 315px - 80px;
+      padding: 0;
+      padding-top: 15px;
+    }
+    .review-form__field--email {
+      width: 316px;
+     }
+    .review-form__name--email {
+      width: 480px - 316px;
+      padding: 0;
+      padding-top: 15px;
+    }
+    .dekstop-none {
+      display: none;
+    }
+    .review-form__name::after {
+      bottom: 24px;
+      right: -315px;
+    }
+  }
+  .review-form__attractions {
+    padding: 0;
+    margin-bottom: 11px;
+    .review-form__rubric {
+      width: 205px;
+    }
+    .review-form__rubric:nth-of-type(4) {
+      margin-left: auto;
+    }
+    .review-form__rubric:nth-of-type(3) {
+      margin-left: 54px;
+    }
+    .review-form__rubric:nth-of-type(2) {
+      margin-left: 52px;
+    }
+  }
+  .review-form__container {
+    padding: 0;
+  }
+  .review-form__comment {
+    padding: 0;
+    margin-bottom: 34px;
+  }
+  .review-form__wrapper--submit {
+    padding: 0;
+  }
+  .review-form__submit {
+    min-width: 480px;
   }
   .review-form__note {
-    margin-left: 317px;
+    margin-left: auto;
+    text-align: right;
   }
 }

@@ -1,11 +1,16 @@
 .form-intro {
-  padding-left: 22px;
-  padding-right: 21px;
+  padding-left: 20px;
+  padding-right: 19px;
+  margin-top: 16px;
   text-align: center;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e5e5e5;
+  // background-color: tan;
 }
 
 .form-intro__caption {
   margin: 0 auto;
+  margin-bottom: 27px;
   font-size: 18px;
   line-height: 26px;
   font-family: "PTSansBold", "Arial", sans-serif;
@@ -21,11 +26,26 @@
   .form-intro {
     width: 470px;
     margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 40px;
     padding-left: 0;
     padding-right: 0;
+    border-bottom: none;
   }
   .form-intro__caption {
     font-size: 30px;
     line-height: 26px;
+  }
+  .form-intro__tagline {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .form-intro {
+    margin-bottom: 25px;
   }
 }
