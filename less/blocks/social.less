@@ -9,14 +9,25 @@
   width: 46px;
   height: 48px;
   background-color: @blue-color;
-    &::before {
-      position: absolute;
-      content: "";
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  &::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
+.social__btn:active {
+  &:before {
+    opacity: 0.3;
+  }
+}
 .social__btn--youtube::before {
   top: 17px;
   left: 13px;
