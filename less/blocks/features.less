@@ -1,7 +1,3 @@
-.features {
-  // background-color: silver;
-}
-
 .features__header {
   position: relative;
   width: 255px;
@@ -89,9 +85,9 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #efefef;
-    .features__caption {
-      color: @black-color;
-    }
+  .features__caption {
+    color: @black-color;
+  }
 }
 
 .features__item--item3,
@@ -114,7 +110,6 @@
   .features__container {
     display: flex;
     padding-bottom: 0;
-    // background-color: tan;
   }
   .features__item {
     width: 256px;
@@ -170,6 +165,13 @@
     width: 400px;
   }
   .features__container--container1 {
+    background-image: url("../img/main-city-desktop@1x.jpg");
+    background-size: 800px;
+    background-position: 100% -70px;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-desktop@2x.jpg");
+      background-size: 800px;
+    }
     .features__item {
       padding: 36px 65px;
       padding-bottom: 48px;
@@ -181,6 +183,13 @@
   }
 
   .features__container--container2 {
+    background-image: url("../img/main-bridge-desktop@1x.jpg");
+    background-size: 800px;
+    background-position: 0 -75px;
+     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-desktop@2x.jpg");
+      background-size: 800px;
+    }
     .features__item {
       padding-right: 90px;
       padding-left: 90px;
