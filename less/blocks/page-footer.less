@@ -8,7 +8,6 @@
   text-transform: uppercase;
   font-family: "PTSans", "Arial", sans-serif;
   background-color: #ffffff;
-  // outline: 5px solid tan;
 }
 
 .page-footer__tags,
@@ -34,15 +33,25 @@
 }
 
 .page-footer__link {
+  position: relative;
   display: inline-block;
   width: 27px;
   height: 34px;
-  // background-color: red;
-  background-color: transparent;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   vertical-align: top;
+}
+
+.page-footer__icon {
+  position: absolute;
+  left: 0;
+  width: 27px;
+  height: 34px;
+  &:hover {
+    fill: @blue-color;
+  }
+  &:active {
+    fill: @black-color;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
