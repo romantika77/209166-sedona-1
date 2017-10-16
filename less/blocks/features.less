@@ -21,7 +21,6 @@
   background-image: url("../img/bg-triangle.svg");
   background-repeat: no-repeat;
   background-color: transparent;
-  // background-color: red;
 }
 
 .features__item {
@@ -38,7 +37,6 @@
 
 .features__item--item1 {
   padding-top: 50px;
-  // padding-bottom: 15px;
   padding-right: 26px;
   padding-left: 26px;
 }
@@ -63,12 +61,22 @@
   padding-bottom: 260px;
   background-image: url("../img/main-city-mobile@1x.jpg");
   background-position: bottom;
+  background-color: @blue-color;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/main-city-mobile@2x.jpg");
+    background-size: 320px;
+  }
 }
 
 .features__container--container2 {
   padding-bottom: 260px;
   background-image: url("../img/main-bridge-mobile@1x.jpg");
   background-position: bottom;
+  background-color: @blue-color;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/main-bridge-mobile@2x.jpg");
+    background-size: 320px;
+  }
 }
 
 .features__item--item2 {
@@ -121,13 +129,21 @@
     font-size: 21px;
   }
   .features__container--container1 {
+    background-image: url("../img/main-city-tablet@1x.jpg");
     background-position: top right;
     background-size: cover;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-city-tablet@2x.jpg");
+    }
   }
   .features__container--container2 {
     justify-content: flex-end;
+    background-image: url("../img/main-bridge-tablet@1x.jpg");
     background-position: top left;
     background-size: cover;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/main-bridge-tablet@2x.jpg");
+    }
   }
   .features__container--container3 {
     padding-right: 0;
