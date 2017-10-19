@@ -1,6 +1,7 @@
 .main-nav {
   position: relative;
   margin-bottom: 56px;
+  background-color: pink;
 }
 
 .main-nav__logo {
@@ -25,9 +26,16 @@
   width: 23px;
   height: 22px;
   background-color: transparent;
-  background-image: url("../img/icon-cross.svg");
-  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+}
+
+.main-nav__close--nojs {
+  display: none;
+}
+
+.main-nav__close-icon {
+  fill: #ffffff;
 }
 
 .main-nav__toggle {
@@ -37,10 +45,12 @@
   width: 23px;
   height: 22px;
   background-color: transparent;
-  background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+}
 
+.main-nav__toggle-icon {
+  fill: @blue-color;
 }
 
 @media (min-width: @tablet-width) {
