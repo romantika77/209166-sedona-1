@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: фотогалерея</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="wrapper">
       <header class="page-header">
         <nav class="main-nav">
-          <button class="main-nav__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+          <button class="main-nav__close main-nav__close--nojs" type="button"><svg class="main-nav__close-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-cross"></use></svg><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--item1">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -22,19 +25,19 @@
               <a class="site-list__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="site-list__item site-list__item--item4">
-              <a class="site-list__link" href="#">Html Academy</a>
+              <a class="site-list__link" href="https://htmlacademy.ru">Html Academy</a>
             </li>
           </ul>
-          <button class="main-nav__toggle toggle" type="button"><span class="visually-hidden">Показать меню</span></button>
+          <button class="main-nav__toggle" type="button"><svg class="main-nav__toggle-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-menu"></use></svg><span class="visually-hidden">Показать меню</span></button>
           <a class="main-nav__logo" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="sedona-logo">
+              <img class="main-nav__logo-image" src="img/logo-sedona-mobile.svg" alt="sedona-logo">
             </picture>
           </a>
         </nav>
-        <div class="page-header__picture page-header__picture--small"></div>
+        <div class="page-header__picture page-header__picture--small"><img class="page-header__promo--small" src="img/text-sedona.svg" alt="Sedona"></div>
       </header>
       <main class="page-main">
         <section class="gallery">
@@ -71,7 +74,7 @@
                 <h2 class="gallery__title">Местная растительность</h2>
                 <p class="gallery__author">Автор фото: Сергей</p>
               </div>
-              <span class="gallery__likes"><svg class="gallery__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>143</span>
+              <span class="gallery__likes"><svg class="gallery__icon" width="22" height="20"><use xlink:href="#icon-like"></use></svg>143</span>
             </figcaption>
           </figure>
           <figure class="gallery__item gallery__item--item3">
@@ -121,9 +124,9 @@
             <div class="sedona-showing__scale"></div>
             <div class="sedona-showing__toggle"></div>
             <div class="sedona-showing__control">
-              <div class="sedona-showing__repeat"><svg class="sedona-showing__icon sedona-showing__icon--repeat" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-repeat"></use></svg></div>
+              <div class="sedona-showing__repeat"><svg class="sedona-showing__icon sedona-showing__icon--repeat" width="16" height="20"><use xlink:href="#icon-video-replay"></use></svg></div>
               <div class="sedona-showing__subtitles"><svg class="sedona-showing__icon sedona-showing__icon--subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg></div>
-              <div class="sedona-showing__fullscreen"><svg class="sedona-showing__icon sedona-showing__icon--fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg></div>
+              <div class="sedona-showing__fullscreen"><svg class="sedona-showing__icon sedona-showing__icon--fullscreen" width="20" height="20"><use xlink:href="#icon-video-fullscreen"></use></svg></div>
             </div>
           </div>
         </section>
@@ -137,7 +140,7 @@
         </div>
         <div class="page-footer__copyright">
           <span class="page-footer__copy">Разработано</span>
-          <a class="page-footer__link" href="https://htmlacademy.ru"><svg class="page-footer__icon" width="27" height="34"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg><span class="visually-hidden">Htmlacademy.ru</span></a>
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="page-footer__icon" width="27" height="34"><use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use></svg><span class="visually-hidden">лендинг интенсива «Продвинутый HTML и CSS»</span></a>
         </div>
       </footer>
     </div>
