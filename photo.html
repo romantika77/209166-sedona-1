@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <div class="wrapper">
       <header class="page-header">
         <nav class="main-nav">
+          <!-- модификатор nojs нужен для скрытия иконки при выключенном javascript -->
           <button class="main-nav__close main-nav__close--nojs" type="button"><svg class="main-nav__close-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-cross"></use></svg><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--item1">
@@ -74,7 +72,7 @@
                 <h2 class="gallery__title">Местная растительность</h2>
                 <p class="gallery__author">Автор фото: Сергей</p>
               </div>
-              <span class="gallery__likes"><svg class="gallery__icon" width="22" height="20"><use xlink:href="#icon-like"></use></svg>143</span>
+              <span class="gallery__likes"><svg class="gallery__icon" width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>143</span>
             </figcaption>
           </figure>
           <figure class="gallery__item gallery__item--item3">
@@ -113,7 +111,7 @@
         <section class="sedona-showing">
           <h1 class="visually-hidden">Видеопрезентация Седоны</h1>
           <p class="sedona-showing__title">Все еще сомневаетесь?</p>
-          <p class="sedona-showing__desk">Смортите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <p class="sedona-showing__desk">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           <div class="sedona-showing__demo">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
@@ -124,9 +122,9 @@
             <div class="sedona-showing__scale"></div>
             <div class="sedona-showing__toggle"></div>
             <div class="sedona-showing__control">
-              <div class="sedona-showing__repeat"><svg class="sedona-showing__icon sedona-showing__icon--repeat" width="16" height="20"><use xlink:href="#icon-video-replay"></use></svg></div>
+              <div class="sedona-showing__repeat"><svg class="sedona-showing__icon sedona-showing__icon--repeat" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg></div>
               <div class="sedona-showing__subtitles"><svg class="sedona-showing__icon sedona-showing__icon--subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg></div>
-              <div class="sedona-showing__fullscreen"><svg class="sedona-showing__icon sedona-showing__icon--fullscreen" width="20" height="20"><use xlink:href="#icon-video-fullscreen"></use></svg></div>
+              <div class="sedona-showing__fullscreen"><svg class="sedona-showing__icon sedona-showing__icon--fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg></div>
             </div>
           </div>
         </section>
@@ -144,5 +142,8 @@
         </div>
       </footer>
     </div>
+    <script src="js/svg4everybody.legacy.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>

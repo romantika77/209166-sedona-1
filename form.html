@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
-    </div>
     <div class="wrapper">
       <header class="page-header">
         <nav class="main-nav">
+          <!-- модификатор nojs нужен для скрытия иконки при выключенном javascript -->
           <button class="main-nav__close main-nav__close--nojs" type="button"><svg class="main-nav__close-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-cross"></use></svg><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--item1">
@@ -117,7 +115,7 @@
           </fieldset>
           <div class="review-form__wrapper review-form__wrapper--submit">
             <button class="review-form__submit button">Отправить отзыв</button>
-            <span class="review-form__note"><sup>*</sup>- обязательные поля</span>
+            <span class="review-form__note"><sup>* </sup>&#8211; обязательные поля</span>
           </div>
         </form>
       </main>
@@ -146,5 +144,8 @@
         <button class="modal__close button" type="button">Закрыть окно</button>
       </div>
     </div>
+    <script src="js/svg4everybody.legacy.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
+    <script src="js/picturefill.js"></script>
   </body>
 </html>

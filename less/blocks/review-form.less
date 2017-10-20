@@ -104,7 +104,7 @@
     padding-left: 22px;
     padding-bottom: 7px;
   }
-  .review-form__field:last-child {
+  .review-form__field--email {
     margin-bottom: 24px;
   }
   .review-form__name::after {
@@ -197,15 +197,6 @@
       background-color: rgba(51, 51, 51, 0.3);
       border: 18px solid #d5d5d5;
     }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 292px;
-    background-color: #dbdbdb;
   }
 }
 
@@ -320,6 +311,15 @@
   .review-form__impress {
     order: 1;
     border-bottom: none;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 292px;
+      background-color: #dbdbdb;
+  }
     .review-form__title {
       margin-bottom: 59px;
     }
@@ -410,13 +410,15 @@
     padding-left: 120px;
     padding-right: 120px;
     margin-bottom: 67px;
-    background-color: khaki;
+  }
+  .review-form__wrapper {
+    display: flex;
+    justify-content: flex-start;
   }
   .review-form__contacts,
   .review-form__attractions,
   .review-form__comment {
     width: 960px;
-    background-color: pink;
     .review-form__title {
       position: relative;
       &::before,
@@ -450,7 +452,7 @@
   .review-form__username,
   .review-form__impress {
     padding: 0;
-    background-color: pink;
+    // background-color: pink;
     .review-form__rubric {
       width: 480px;
     }
@@ -459,6 +461,12 @@
       text-align: left;
     }
   }
+
+  .review-form__username,
+  .review-form__impress {
+    width: 480px;
+  }
+
   .review-form__username {
     .review-form__rubric {
       padding: 0;
@@ -477,9 +485,9 @@
   .review-form__contacts {
     width: 960px;
     padding: 0;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     .review-form__title {
-      margin-bottom: 72px;
+      margin-bottom: 77px;
     }
     .review-form__rubric {
       display: flex;
@@ -506,7 +514,7 @@
       display: none;
     }
     .review-form__name::after {
-      bottom: 24px;
+      bottom: 18px;
       right: -315px;
     }
   }
