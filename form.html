@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="wrapper">
       <header class="page-header">
         <nav class="main-nav">
           <!-- модификатор nojs нужен для скрытия иконки при выключенном javascript -->
-          <button class="main-nav__close main-nav__close--nojs" type="button"><svg class="main-nav__close-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-cross"></use></svg><span class="visually-hidden">Закрыть</span></button>
+          <button class="main-nav__close main-nav__close--nojs" type="button"><svg class="main-nav__close-icon" width="23" height="22"><use xlink:href="#icon-cross"></use></svg><span class="visually-hidden">Закрыть</span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--item1">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -26,7 +29,7 @@
               <a class="site-list__link" href="https://htmlacademy.ru">Html Academy</a>
             </li>
           </ul>
-          <button class="main-nav__toggle" type="button"><svg class="main-nav__toggle-icon" width="23" height="22"><use xlink:href="img/sprite.svg#icon-menu"></use></svg><span class="visually-hidden">Показать меню</span></button>
+          <button class="main-nav__toggle" type="button"><svg class="main-nav__toggle-icon" width="23" height="22"><use xlink:href="#icon-menu"></use></svg><span class="visually-hidden">Показать меню</span></button>
           <a class="main-nav__logo" href="index.html">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
@@ -35,12 +38,12 @@
             </picture>
           </a>
         </nav>
-        <div class="page-header__picture page-header__picture--small"><img class="page-header__promo--small" src="img/text-sedona.svg" alt="Sedona"></div>
+        <div class="page-header__picture page-header__picture--small"><img class="page-header__promo page-header__promo--small" src="img/text-sedona.svg" alt="Sedona"></div>
       </header>
       <main class="page-main">
         <section class="form-intro">
-          <h1 class="form-intro__caption">Оставьте свой отзыв  </h1>
-          <p class="form-intro__tagline">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях </p>
+          <h1 class="form-intro__caption">Оставьте свой отзыв</h1>
+          <p class="form-intro__tagline">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
         <form class="review-form" action="https://echo.htmlacademy.ru" method="get">
           <div class="review-form__wrapper">
@@ -75,15 +78,15 @@
             <fieldset class="review-form__group review-form__impress">
               <legend class="review-form__title">Ваше общее впечатление:</legend>
               <p class="review-form__rubric">
-                <input class="review-form__field" type="radio" name="impress" id="radio-1" value="positive" checked>
+                <input class="review-form__field visually-hidden" type="radio" name="impress" id="radio-1" value="positive" checked>
                 <label class="review-form__name review-form__name--strong" for="radio-1">Скорее положительное</label>
               </p>
               <p class="review-form__rubric">
-                <input class="review-form__field" type="radio" name="impress" id="radio-2" value="negative">
+                <input class="review-form__field visually-hidden" type="radio" name="impress" id="radio-2" value="negative">
                 <label class="review-form__name review-form__name--strong" for="radio-2">Скорее отрицательное</label>
               </p>
               <p class="review-form__rubric">
-                <input class="review-form__field" type="radio" name="impress" id="radio-3" value="whatever">
+                <input class="review-form__field visually-hidden" type="radio" name="impress" id="radio-3" value="whatever">
                 <label class="review-form__name review-form__name--strong" for="radio-3">Затрудняюсь ответить</label>
               </p>
             </fieldset>
@@ -91,19 +94,19 @@
               <legend class="review-form__title">Посещенные достопримечательности:</legend>
               <div class="review-form__container">
                 <p class="review-form__rubric">
-                  <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-1" value="bridge" checked>
+                  <input class="review-form__field visually-hidden" type="checkbox" name="attractions" id="checkbox-1" value="bridge" checked>
                   <label class="review-form__name review-form__name--strong review-form__name--bridge" for="checkbox-1">Мост Дьявола</label>
                 </p>
                 <p class="review-form__rubric">
-                  <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-2" value="park" checked>
+                  <input class="review-form__field visually-hidden" type="checkbox" name="attractions" id="checkbox-2" value="park" checked>
                   <label class="review-form__name review-form__name--strong review-form__name--park" for="checkbox-2">Слайд-парк</label>
                 </p>
                 <p class="review-form__rubric">
-                  <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-3" value="mountain">
+                  <input class="review-form__field visually-hidden" type="checkbox" name="attractions" id="checkbox-3" value="mountain">
                   <label class="review-form__name review-form__name--strong review-form__name--mountain" for="checkbox-3">Гора-Колокол</label>
                 </p>
                 <p class="review-form__rubric">
-                  <input class="review-form__field" type="checkbox" name="attractions" id="checkbox-4" value="cliffs" checked>
+                  <input class="review-form__field visually-hidden" type="checkbox" name="attractions" id="checkbox-4" value="cliffs" checked>
                   <label class="review-form__name review-form__name--strong review-form__name--cliffs" for="checkbox-4">Красные скалы</label>
                 </p>
               </div>
@@ -122,25 +125,25 @@
       <footer class="page-footer">
         <div class="page-footer__tags">#visitsedona</div>
         <div class="page-footer__social social">
-          <a href="#" class="social__btn social__btn--tw"><svg class="social__icon social__icon--tw" width="18" height="14"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg><span class="visually-hidden">Твиттер</span></a>
-          <a href="#" class="social__btn social__btn--fb"><svg class="social__icon social__icon--fb" width="9" height="18"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg><span class="visually-hidden">Фейсбук</span></a>
-          <a href="#" class="social__btn social__btn--youtube"><svg class="social__icon social__icon--yotube" width="20" height="14"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg><span class="visually-hidden">Ютубе</span></a>
+          <a href="#" class="social__btn social__btn--tw"><svg class="social__icon social__icon--tw" width="18" height="14"><use xlink:href="#icon-twitter"></use></svg><span class="visually-hidden">Твиттер</span></a>
+          <a href="#" class="social__btn social__btn--fb"><svg class="social__icon social__icon--fb" width="9" height="18"><use xlink:href="#icon-facebook"></use></svg><span class="visually-hidden">Фейсбук</span></a>
+          <a href="#" class="social__btn social__btn--youtube"><svg class="social__icon social__icon--yotube" width="20" height="14"><use xlink:href="#icon-youtube"></use></svg><span class="visually-hidden">Ютубе</span></a>
         </div>
         <div class="page-footer__copyright">
           <span class="page-footer__copy">Разработано</span>
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="page-footer__icon" width="27" height="34"><use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use></svg><span class="visually-hidden">лендинг интенсива «Продвинутый HTML и CSS»</span></a>
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="page-footer__icon" width="27" height="34"><use xlink:href="#icon-logo-htmlacademy"></use></svg><span class="visually-hidden">лендинг интенсива «Продвинутый HTML и CSS»</span></a>
         </div>
       </footer>
     </div>
     <div class="modal modal--fail">
-      <p class="modal__title modal__title--fail">Что-то пошло  не так!</p>
-      <p class="modal__desc modal__desc--fail">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить </p>
+      <p class="modal__title modal__title--fail">Что-то пошло не так!</p>
+      <p class="modal__desc modal__desc--fail">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="modal__submit button">OK</button>
     </div>
     <div class="modal modal--succes">
-      <p class="modal__title modal__title--succes">Ваш отзыв отправлен!  </p>
-      <p class="modal__desc modal__desc--succes">Спасибо за ваше участие, ваш отзыв уже поступил к нам.  В ближайшее время мы опубликуем его на сайте. </p>
-      <div class="modal--bottom">
+      <p class="modal__title modal__title--succes">Ваш отзыв отправлен!</p>
+      <p class="modal__desc modal__desc--succes">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
+      <div class="modal__bottom">
         <button class="modal__close button" type="button">Закрыть окно</button>
       </div>
     </div>

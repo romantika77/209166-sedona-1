@@ -34,6 +34,7 @@
   color: @black-color;
   background-color: #ffffff;
 }
+
 .gallery__title {
   margin: 0;
   margin-top: 10px;
@@ -71,57 +72,71 @@
     padding-right: 60px;
     padding-left: 60px;
   }
+
   .gallery__header {
     width: 490px;
     margin: 0 auto;
     margin-bottom: 41px;
+    padding-left: 25px;
+    padding-right: 23px;
     padding-top: 50px;
     border-bottom: none;
   }
+
   .gallery__caption {
     margin: 0;
     margin-bottom: 30px;
     font-size: 30px;
     line-height: 30px;
   }
+
   .gallery__item {
     width: 324px;
     padding: 0;
     margin: 0;
   }
+
   .gallery__item--big {
     width: 100%;
+
     .gallery__picture--big {
       width: 648px;
       height: 400px;
     }
   }
+
   .gallery__picture {
     width: 100%;
     height: 267px;
     padding: 0;
     margin: 0;
   }
+
   .gallery__desk {
     display: flex;
     justify-content: space-between;
     margin-top: -7px;
     padding: 6px 20px;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     background-color: #f2f2f2;
   }
+
   .gallery__likes {
-    left: 6px;
+    padding-left: 37px;
     align-self: center;
     width: 70px;
   }
+
+  .gallery__icon {
+    top: 4px;
+    left: 6px;
+  }
+
   .gallery__name {
     width: 200px;
   }
-  .gallery__likes::before {
-    left: 5px;
-  }
+
   .gallery__item--item3 {
     .gallery__desk {
       background-color: #eaeaea;
@@ -133,30 +148,37 @@
   .gallery {
     padding: 0;
   }
+
   .gallery__header {
     margin-top: 38px;
-    margin-bottom: 49px;
+    margin-bottom: 47px;
   }
+
   .gallery__item {
     position: relative;
     width: 400px;
     margin-top: -8px;
   }
+
   .gallery__item--big {
     width: 1200px;
+
     .gallery__picture--big {
       width: 1200px;
       height: 400px;
     }
+
     .gallery__desk {
       color: #ffffff;
     }
   }
+
   .gallery__item--item3 {
     .gallery__desk {
       background-color: rgba(0, 0, 0, 0.3);
     }
   }
+
   .gallery__desk {
     position: absolute;
     bottom: 8px;
@@ -164,10 +186,12 @@
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.3);
   }
+
   .gallery__likes {
     width: 75px;
     padding-right: 5px;
   }
+
   .gallery__icon {
     fill: #ffffff;
     opacity: 1;
